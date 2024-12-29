@@ -64,6 +64,44 @@ Implementa el algoritmo de Dijkstra para encontrar la distancia mínima desde un
   - `v` (Vertice<E>): Vértice inicial.
 - **Salida:** Mapa con la distancia mínima a cada vértice.
 
+
+# Diagrama de Flujo para el Algoritmo de Dijkstra
+
+## Inicio
+1. **Inicialización:**
+   - Crear una lista `porVisitar` para almacenar los vértices no visitados.
+   - Crear un mapa `mapa` para almacenar las distancias, inicializando todas a `Integer.MAX_VALUE`.
+   - Establecer la distancia del vértice inicial `v` a 0 en `mapa`.
+
+2. **Agregar todos los vértices a `porVisitar` y al mapa:**
+   - Iterar por todos los vértices del grafo `g`.
+   - Agregar cada vértice a `porVisitar`.
+   - Inicializar su distancia en el `mapa` a `Integer.MAX_VALUE`.
+
+3. **Mientras `porVisitar` no esté vacío:**
+   1. **Seleccionar el vértice con menor distancia:**
+      - Llamar a la función `seleccionar` que recorre `mapa` y encuentra el vértice con la menor distancia entre los no visitados.
+   2. **Eliminar el vértice seleccionado de `porVisitar`.**
+   3. **Iterar sobre los arcos del vértice seleccionado:**
+      - Para cada arco que conecte al vértice seleccionado con otro destino:
+        - Si el destino aún está en `porVisitar`:
+          1. Calcular la nueva distancia como la suma de la distancia del vértice actual y la etiqueta del arco.
+          2. Si la nueva distancia es menor que la distancia almacenada en el mapa:
+             - Actualizar la distancia del destino en el mapa.
+
+4. **Fin del ciclo**
+   - Repetir hasta que todos los vértices hayan sido visitados.
+
+## Salida
+- Devolver el mapa `mapa` que contiene las distancias mínimas desde el vértice inicial a todos los demás.
+
+## Función seleccionar
+1. Recorrer el mapa de distancias.
+2. Encontrar el vértice con menor distancia que esté en `porVisitar`.
+3. Retornar dicho vértice
+
+## Fin
+
 ---
 
 ### 6. `colorearMapa`
