@@ -95,12 +95,18 @@ Implementa el algoritmo de Dijkstra para encontrar la distancia mínima desde un
 ## Salida
 - Devolver el mapa `mapa` que contiene las distancias mínimas desde el vértice inicial a todos los demás.
 
-## Función seleccionar
-1. Recorrer el mapa de distancias.
-2. Encontrar el vértice con menor distancia que esté en `porVisitar`.
-3. Retornar dicho vértice
+### Función seleccionar
 
-## Fin
+1. Recorrer el mapa de distancias.
+2. Para cada vértice:
+   - Verificar si el vértice está en `porVisitar`.
+   - Comparar su distancia con la menor distancia encontrada hasta el momento.
+3. Retornar el vértice con menor distancia que cumpla las condiciones:
+   - Pertenece a `porVisitar`.
+   - Su distancia es menor o igual a las demás.
+
+**Fin**
+
 
 ---
 
