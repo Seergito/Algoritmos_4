@@ -64,6 +64,8 @@ Implementa el algoritmo de Dijkstra para encontrar la distancia mínima desde un
   - `v` (Vertice<E>): Vértice inicial.
 - **Salida:** Mapa con la distancia mínima a cada vértice.
 
+- ![Diagrama](assets/djstra.png)
+
 
 # Diagrama de Flujo para el Algoritmo de Dijkstra
 
