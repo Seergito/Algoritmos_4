@@ -108,6 +108,18 @@ public static Map<String, Integer> llenarMochila(int volumenMaximo, Map<String,I
     return solucion;
 }
 
+ private static String seleccionarMochila(int volumenMaximo, Map<String, Integer> volumenes) {
+        String toRet = null;
+        Iterator<String> it = volumenes.getClaves();
+        while (it.hasNext()) {
+            String actual = it.next();
+            int volumen = volumenes.get(actual);
+            if (volumen<= volumenMaximo && (toRet == null || volumen > volumenes.get(toRet))) {
+                toRet = actual;
+            }
+        }
+        return toRet;
+    }
 
 public static <T> Map<Vertice<String>, String> horarioExamens(Grafo<String, T> g, String[] diasSemana) {
     // Mapa para almacenar la solución, es decir, qué día se asigna a cada asignatura.
